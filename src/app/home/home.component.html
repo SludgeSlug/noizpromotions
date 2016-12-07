@@ -6,14 +6,22 @@
 
   <div class="row">
       <div class="col-sm-8">
+          <h2>BIG RIFFS AND HEAVY TONES</h2>
+          <p>Promoters of heavy live music and dark art, based in Manchester, UK.</p>
+          <p>Founded in March 2015, NOIZ is now handling live shows, bookings, art exhibitions and parties/aftershows</p>
+          <p>
+Within a year of our first all-dayer, we hosted many more shows that started to see us bringing in renowned international acts and many of the UK's most respected underground heavy bands. </p>
+          <h4><small>Latest News</small></h4>
+          <hr>
           <div *ngFor="let blogPost of blogPosts">
-            <h2>{{blogPost.title.$t}}</h2>
+            <h3>{{blogPost.title.$t}}</h3>
             <p>{{blogPost.content.$t}}</p>
+            <hr>
           </div>
       </div>
       <div class="col-sm-3 offset-sm-1">
           <div class="sidebar-module sidebar-module-inset">
-            Some shit on the side
+            <img class="img-responsive" src='../../assets/NOIZLOGO1.png'>
           </div>
       </div>
   </div>
