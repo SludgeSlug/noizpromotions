@@ -1,12 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-@font-face {
-    font-family: 'Strippenzieher';
+/*@font-face {
+    font-family: 'Strippe';
     src: url('assets/strippe.ttf');
-}
+}*/
+
+@font-face { font-family: myFont; src: url('assets/myFont.otf'); }
 
 body {
   background-color: black;
-  color: white;  
+  color: white;
+  font-family: myFont;
 }
 
 .rounded {
