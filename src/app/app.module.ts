@@ -9,6 +9,7 @@ import { routing } from './app.routing.module';
 import { MenuComponent } from './menu/menu.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about';
 
 import { BlogService } from './shared';
 
@@ -17,7 +18,8 @@ import { BlogService } from './shared';
     AppComponent,
     MenuComponent,
     GalleryComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

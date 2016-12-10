@@ -1,5 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Strippenzieher';
+    src: url('assets/strippe.ttf');
+}
+
 body {
   background-color: black;
-  color: white;
+  color: white;  
+}
+
+.rounded {
+  border-radius: 10px;
+  border: solid 6px white;
+  padding: 10px;
+  margin: 10px;
+}
+
+.containsColumns {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
