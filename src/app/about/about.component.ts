@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../shared';
 
 @Component({
   selector: 'app-about',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(public navigationService: NavigationService) { }
 
   ngOnInit() {
   }

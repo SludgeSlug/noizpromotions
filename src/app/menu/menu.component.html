@@ -18,7 +18,7 @@
           <a (click)="navigationService.home()">Home</a>
         </li>
         <li [class.active]="activePage('events')">
-          <a href="#">Events</a>
+          <a (click)="navigationService.events()">Events</a>
         </li>
         <li [class.active]="activePage('news')">
           <a (click)="navigationService.news()">News</a>
@@ -30,7 +30,7 @@
           <a (click)="navigationService.gallery()">Gallery</a>
         </li>
         <li [class.active]="activePage('store')">
-          <a href="#">Store</a>
+          <a (click)="navigationService.store()">Store</a>
         </li>
         <li [class.active]="activePage('contact')">
           <a (click)="navigationService.contact()">Contact us</a>

@@ -30,4 +30,16 @@ export class NavigationService {
         this.router.navigate(['/contact']);
     }
 
+    public events(): void {
+        window.location.href = 'https://www.facebook.com/pg/noizpromo/events/';
+    }
+
+    public store(): void {
+        window.location.href = 'http://noizstore.bigcartel.com/';
+    }
+
+    public facebook(): void {
+        window.location.href = 'https://www.facebook.com/noizpromo/';
+    }
+
 }
