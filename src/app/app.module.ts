@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about';
 
 import { BlogService, NavigationService } from './shared';
+import { ContactComponent } from './contact/contact.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { BlogService, NavigationService } from './shared';
     MenuComponent,
     GalleryComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

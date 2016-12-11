@@ -22,4 +22,12 @@ export class NavigationService {
         this.router.navigate(['/gallery']);
     }
 
+    public news(): void {
+        this.router.navigate(['/news']);
+    }
+
+    public contact(): void {
+        this.router.navigate(['/contact']);
+    }
+
 }

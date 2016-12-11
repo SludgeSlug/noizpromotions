@@ -21,7 +21,7 @@
           <a href="#">Events</a>
         </li>
         <li [class.active]="activePage('news')">
-          <a href="#">News</a>
+          <a (click)="navigationService.news()">News</a>
         </li>
         <li [class.active]="activePage('about')">
           <a (click)="navigationService.about()">About</a>
@@ -33,7 +33,7 @@
           <a href="#">Store</a>
         </li>
         <li [class.active]="activePage('contact')">
-          <a href="#">Contact us</a>
+          <a (click)="navigationService.contact()">Contact us</a>
         </li>
       </ul>
     </div>
