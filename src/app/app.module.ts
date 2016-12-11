@@ -11,7 +11,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about';
 
-import { BlogService } from './shared';
+import { BlogService, NavigationService } from './shared';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { BlogService } from './shared';
     routing
   ],
   providers: [
-    BlogService
+    BlogService,
+    NavigationService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavigationService } from '../shared';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  private router: Router;
+  public navigationService: NavigationService;
+
+  constructor(private _router: Router, private _navigationService: NavigationService) {
+    this.router = _router;
+    this.navigationService = _navigationService;
+  }
 
   ngOnInit() {
+  }
+
+  public activePage(pageName: string) {
+    if (this.router.url.indexOf(pageName) > -1) {
+      return true;
+    }
+    if (pageName === 'home' && this.router.url === '/') {
+      return true;
+    }
+    return false;
   }
 
 }
