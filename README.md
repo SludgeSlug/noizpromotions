@@ -2,8 +2,15 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Pre requisites
+
+Python and Node package manager need to be installed. Run `pip install Flask` to install flask for Python which is required to run the server
+
+## Installation
+
+Run `npm install` to load node packages. Run `ng build` to prepare the client side code to execute from the Python server
+
+To run the project run `python app.py` navigate to `http://localhost:8080` to load the page
 
 ## Code scaffolding
 
