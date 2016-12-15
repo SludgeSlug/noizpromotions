@@ -1,12 +1,15 @@
 import os
 import json
-from flask import Flask, Response, render_template, send_from_directory
+from flask import Flask, Response, render_template, send_from_directory, request
+import server.email_sender as email_sender
 
 app = Flask(__name__, template_folder='dist')
 
-@app.route('/api/test')
-def test():
-    return 'Test'
+@app.route('/api/email', methods=['POST'])
+def send_email():
+    email_json = request.get_json(force=True)
+    email_sender.sendMail(email_json)
+    return 'done'
 
 @app.route('/')
 def root():
