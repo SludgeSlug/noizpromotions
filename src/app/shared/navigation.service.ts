@@ -18,10 +18,6 @@ export class NavigationService {
         this.router.navigate(['/']);
     }
 
-    public gallery(): void {
-        this.router.navigate(['/gallery']);
-    }
-
     public news(): void {
         this.router.navigate(['/news']);
     }

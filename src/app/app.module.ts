@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { routing } from './app.routing.module';
 
 import { MenuComponent } from './menu/menu.component';
-import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about';
 
@@ -19,7 +18,6 @@ import { NewsComponent } from './news/news.component';
   declarations: [
     AppComponent,
     MenuComponent,
-    GalleryComponent,
     HomeComponent,
     AboutComponent,
     ContactComponent,
