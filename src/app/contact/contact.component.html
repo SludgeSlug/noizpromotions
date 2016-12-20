@@ -2,32 +2,32 @@
   <div class="col-md-12 rounded contains-columns">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <label for="txtEmail">Your address</label>
-        <input id="txtEmail" type="email" class="form-control">
+        <label for="txtEmail">EMAIL:</label>
+        <input id="txtEmail" [(ngModel)]="email.from" type="email" class="form-control">
       </div>
     </div>
     <br />
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <label for="ddSubject">Reason for enquiry</label>
-        <select id="ddSubject" class="form-control">
-            <option value="mailinglist">Add me to your mailing list</option>
-            <option value="bookings">Bookings enquiry</option>
-            <option value="enquiry">General enquiry</option>
+        <label for="ddSubject">ENQUIRY TYPE:</label>
+        <select id="ddSubject" [(ngModel)]="email.subject" class="form-control">
+            <option value="mailinglist">MAILING LIST</option>
+            <option value="bookings">BOOKING</option>
+            <option value="enquiry">GENERAL</option>
           </select>
       </div>
     </div>
     <br />
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <label for="txtMessage">Your message</label>
-        <textarea id="txtMessage" class="form-control"></textarea>
+        <label for="txtMessage">YOUR MESSAGE:</label>
+        <textarea id="txtMessage" [(ngModel)]="email.body" class="form-control"></textarea>
       </div>
     </div>
     <br />
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <input type="submit" class="form-control" value="Send">
+        <button (click)="sendEmail()" class="form-control">Send</button>
       </div>
     </div>
   </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from '../shared';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  email: Object = { };
+
+  constructor(private contactService: ContactService) { }
 
   ngOnInit() {
   }
 
+  sendEmail() {
+    this.contactService.sendEmail(this.email);
+  }
 }

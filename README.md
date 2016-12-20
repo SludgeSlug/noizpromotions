@@ -6,6 +6,8 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 
 Python and Node package manager need to be installed. Run `pip install Flask` to install flask for Python which is required to run the server
 
+Run `pip install pymongo` to install dependencies required to talk to mongo db
+
 ## Installation
 
 Run `npm install` to load node packages. Run `ng build` to prepare the client side code to execute from the Python server

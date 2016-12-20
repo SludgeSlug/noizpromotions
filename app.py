@@ -8,8 +8,10 @@ app = Flask(__name__, template_folder='dist')
 @app.route('/api/email', methods=['POST'])
 def send_email():
     email_json = request.get_json(force=True)
-    email_sender.sendMail(email_json)
-    return 'done'
+    result = email_sender.sendMail(email_json, request.remote_addr)
+    if result == 'failed':
+        return 'Bad request', 400
+    return 'OK'
 
 @app.route('/')
 def root():

@@ -10,8 +10,8 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about';
 
-import { BlogService, NavigationService } from './shared';
-import { ContactComponent } from './contact/contact.component';
+import { BlogService, NavigationService, ContactService } from './shared';
+import { ContactComponent } from './contact';
 import { NewsComponent } from './news/news.component';
 
 @NgModule({
@@ -32,7 +32,8 @@ import { NewsComponent } from './news/news.component';
   ],
   providers: [
     BlogService,
-    NavigationService
+    NavigationService,
+    ContactService
   ],
   bootstrap: [AppComponent]
 })
