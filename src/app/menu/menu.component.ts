@@ -11,6 +11,7 @@ export class MenuComponent implements OnInit {
 
   private router: Router;
   public navigationService: NavigationService;
+  public collapsed: boolean = true;
 
   constructor(private _router: Router, private _navigationService: NavigationService) {
     this.router = _router;

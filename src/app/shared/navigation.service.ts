@@ -1,41 +1,37 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Injectable()
 export class NavigationService {
 
-    private router: Router;
-
-    constructor(private _router: Router) {
-        this.router = _router;
+    constructor() {
     }
 
-    public about(): void {
-        this.router.navigate(['/about']);
+    public about(): string {
+        return '/about';
     }
 
-    public home(): void {
-        this.router.navigate(['/']);
+    public home(): string {
+        return '/';
     }
 
-    public news(): void {
-        this.router.navigate(['/news']);
+    public news(): string {
+        return '/news';
     }
 
-    public contact(): void {
-        this.router.navigate(['/contact']);
+    public contact(): string {
+        return '/contact';
     }
 
-    public events(): void {
-        window.location.href = 'https://www.facebook.com/pg/noizpromo/events/';
+    public events(): string {
+        return 'https://www.facebook.com/pg/noizpromo/events/';
     }
 
-    public store(): void {
-        window.location.href = 'http://noizstore.bigcartel.com/';
+    public store(): string {
+        return 'http://noizstore.bigcartel.com/';
     }
 
-    public facebook(): void {
-        window.location.href = 'https://www.facebook.com/noizpromo/';
+    public facebook(): string {
+        return 'https://www.facebook.com/noizpromo/';
     }
 
 }

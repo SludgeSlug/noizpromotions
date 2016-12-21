@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <div class="rounded" *ngFor="let blogPost of blogPosts">
         <h3>{{blogPost.title.$t}}</h3>
-        <p>{{blogPost.content.$t}}</p>
+        <div [innerHTML]="blogPost.content.$t"></div>
       </div>
     </div>
   </div>

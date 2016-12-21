@@ -16,7 +16,7 @@
                     heavy music promoters.
                 </p>
                 <p>
-                    Click <a (click)="navigationService.events()">HERE</a> to see all our upcoming events
+                    Click <a [href]="navigationService.events()">HERE</a> to see all our upcoming events
                 </p>
             </div>
         </div>
@@ -32,14 +32,14 @@
         <div class="col-md-8">
             <p>
                 We have several new and exciting projects that we are preparing to launch in 2017. You can sign up to our MAILING LIST or
-                connect with us on <a (click)="navigationService.facebook()">FACEBOOK</a> to be first in
+                connect with us on <a [href]="navigationService.facebook()">FACEBOOK</a> to be first in
                 line for all of our updates and announcements!
             </p>
             <img class="img-responsive" src='../../assets/p_sep.png'>
             <p>
                 We are considering applications from bands playing styles including (but not limited to) Doom, Black, Sludge, Grind, Stoner,
                 Death, Psych, Post-rock, Prog, Crust, Blues and Thrash. Please apply using our
-                <a (click)="navigationService.contact()">FORM</a>
+                <a [routerLink]="navigationService.contact()">FORM</a>
             </p>
         </div>
         <div class="col-md-3 offset-md-1">

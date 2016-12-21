@@ -2,7 +2,9 @@
   <div class="col-md-12">
     <div class="col-md-12">
       <div class="rounded">
-        <img (click)="navigationService.events()" class="center-block img-responsive clickable" src='../../assets/events_cta.png'>
+        <a [href]="navigationService.events()">
+          <img class="center-block img-responsive clickable" src='../../assets/events_cta.png'>
+        </a>
       </div>
     </div>
   </div>
@@ -11,12 +13,16 @@
   <div class="col-md-12">
     <div class="col-md-4">
       <div class="rounded">
-        <img (click)="navigationService.news()" class="center-block img-responsive clickable" src='../../assets/news_cta.png'>
+        <a [routerLink]="navigationService.news()">
+          <img class="center-block img-responsive clickable" src='../../assets/news_cta.png'>
+        </a>
       </div>
     </div>
     <div class="col-md-4">
       <div class="rounded">
-        <img (click)="navigationService.about()" class="center-block img-responsive clickable" src='../../assets/about_cta.png'>
+        <a [routerLink]="navigationService.about()">
+          <img class="center-block img-responsive clickable" src='../../assets/about_cta.png'>
+        </a>
       </div>
     </div>
     <div class="col-md-4">
