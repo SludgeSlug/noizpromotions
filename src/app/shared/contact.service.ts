@@ -10,6 +10,6 @@ export class ContactService {
     }
 
     sendEmail(emailModel):any {
-        this.http.post(this.url, emailModel);
+        return this.http.post(this.url, emailModel);
     }
 }

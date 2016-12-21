@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class BlogService {
-    private url = 'https://noiztest.blogspot.com/feeds/posts/default?alt=json-in-script&callback=JSONP_CALLBACK';
+    private url = 'https://noizpromo.blogspot.co.uk/feeds/posts/default?alt=json-in-script&callback=JSONP_CALLBACK';
 
     constructor (private jsonp: Jsonp) {}
 

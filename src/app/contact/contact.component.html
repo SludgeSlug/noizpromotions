@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-12 rounded contains-columns">
+  <div class="col-md-12 rounded contains-columns" *ngIf="!success && !failed">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <label for="txtEmail">EMAIL:</label>
@@ -18,10 +18,10 @@
       </div>
     </div>
     <br />
-    <div class="row">
+    <div class="row" *ngIf="email.subject !== 'mailinglist'">
       <div class="col-md-6 col-md-offset-3">
         <label for="txtMessage">YOUR MESSAGE:</label>
-        <textarea id="txtMessage" [(ngModel)]="email.body" class="form-control"></textarea>
+        <textarea id="txtMessage" rows="15" [(ngModel)]="email.body" class="form-control"></textarea>
       </div>
     </div>
     <br />
@@ -31,14 +31,18 @@
       </div>
     </div>
   </div>
-</div>
-<!--<div class="col-md-12">
-        
-        
-        
-        <label for="txtMessage">Your message</label>
-        <textarea id="txtMessage"></textarea>
-        <input type="submit">
+  <div class="col-md-12 rounded contains-columns" *ngIf="success">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <p>Thanks for your message</p>
+      </div>
     </div>
   </div>
-</div>-->
+  <div class="col-md-12 rounded contains-columns" *ngIf="failed">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <p>We are currently experiencing an issue with this page. Please contact info@noizpromotions.com</p>
+      </div>
+    </div>
+  </div>
+</div>

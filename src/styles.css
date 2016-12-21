@@ -31,6 +31,10 @@ a:hover {
   color: black;
 }
 
+textarea {
+  resize: vertical;
+}
+
 @media (max-width: 1200px) {
     .contains-columns {
     margin-left: 30px;

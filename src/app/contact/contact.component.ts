@@ -8,7 +8,9 @@ import { ContactService } from '../shared';
 })
 export class ContactComponent implements OnInit {
 
-  email: Object = { };
+  email: Object = {};
+  success: boolean = false;
+  failed: boolean = false;
 
   constructor(private contactService: ContactService) { }
 
@@ -16,6 +18,12 @@ export class ContactComponent implements OnInit {
   }
 
   sendEmail() {
-    this.contactService.sendEmail(this.email);
+    console.log('function called 1');
+    this.contactService.sendEmail(this.email)
+      .subscribe(() => {
+        this.success = true;
+      }, () => {
+        this.failed = true;
+      });
   }
 }
