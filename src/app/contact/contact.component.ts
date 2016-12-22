@@ -11,6 +11,7 @@ export class ContactComponent implements OnInit {
   email: Object = {};
   success: boolean = false;
   failed: boolean = false;
+  loading: boolean = false;
 
   constructor(private contactService: ContactService) { }
 
@@ -18,12 +19,14 @@ export class ContactComponent implements OnInit {
   }
 
   sendEmail() {
-    console.log('function called 1');
+    this.loading = true;
     this.contactService.sendEmail(this.email)
       .subscribe(() => {
         this.success = true;
+        this.loading = false;
       }, () => {
         this.failed = true;
+        this.loading = false;
       });
   }
 }

@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-12 rounded contains-columns" *ngIf="!success && !failed">
+  <div class="col-md-12 rounded contains-columns" *ngIf="!success && !failed && !loading">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <label for="txtEmail">EMAIL:</label>
@@ -42,6 +42,13 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <p>We are currently experiencing an issue with this page. Please contact info@noizpromotions.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 contains-columns" *ngIf="loading">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="loader"></div>
       </div>
     </div>
   </div>
