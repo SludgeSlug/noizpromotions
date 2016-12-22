@@ -12,14 +12,19 @@ def sendMail(emailData, ipAddress):
         return "failed"
 
     fromaddr = config.EMAIL_FROM_ADDRESS
-    toaddr = config.EMAIL_BOOKING_ADDRESS
+    toaddr = getToAddr(emailData['subject'])
+    if toaddr == '':
+        return "failed"
+
     msg = MIMEMultipart()
     msg['From'] = fromaddr
     msg['To'] = toaddr
-    msg['Subject'] = emailData['subject']
+    msg['Subject'] = 'WEB MESSAGE FROM ' + emailData['from']
 
-    body = emailData['body']
-    msg.attach(MIMEText(body, 'plain'))
+    body = 'FROM: ' + emailData['from']
+    if emailData['subject'] != 'mailinglist':
+        body += '<br>MESSAGE: ' + emailData['body']
+    msg.attach(MIMEText(body, 'html'))
 
     server = smtplib.SMTP(config.SMTP_ADDRESS, config.SMTP_PORT)
     server.starttls()
@@ -30,3 +35,12 @@ def sendMail(emailData, ipAddress):
     server.quit()
     db.log_email(ipAddress)
     return "ok"
+
+def getToAddr(subject):
+    if subject == 'mailinglist':
+        return config.EMAIL_MAILINGLIST_ADDRESS
+    if subject == 'bookings':
+        return config.EMAIL_BOOKING_ADDRESS
+    if subject == 'enquiry':
+        return config.EMAIL_INFO_ADDRESS
+    return ''

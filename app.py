@@ -4,6 +4,7 @@ from flask import Flask, Response, render_template, send_from_directory, request
 import server.email_sender as email_sender
 
 app = Flask(__name__, template_folder='dist')
+app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
 
 @app.route('/api/email', methods=['POST'])
 def send_email():
