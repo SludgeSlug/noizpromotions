@@ -14,20 +14,70 @@
     <div class="col-md-4">
       <div class="rounded">
         <a [routerLink]="navigationService.news()">
-          <img class="center-block img-responsive clickable" src='../../assets/news_cta.png'>
+          <img class="center-block img-responsive" src='../../assets/news_cta.png'>
         </a>
       </div>
     </div>
     <div class="col-md-4">
       <div class="rounded">
         <a [routerLink]="navigationService.about()">
-          <img class="center-block img-responsive clickable" src='../../assets/about_cta.png'>
+          <img class="center-block img-responsive" src='../../assets/about_cta.png'>
         </a>
       </div>
     </div>
     <div class="col-md-4">
       <div class="rounded">
-        <img class="center-block img-responsive clickable" src='../../assets/links_cta.png'>
+        <img class="center-block img-responsive" src='../../assets/links_cta.png'>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row social-page">
+  <div class="col-md-12 rounded contains-columns">
+    <div class="col-md-2 col-md-offset-1">
+      <a [href]="navigationService.facebook()">
+        <img class="center-block img-responsive" src='../../assets/facebook_logo.png'>
+      </a>
+    </div>
+    <div class="col-md-2">
+      <a [href]="navigationService.youtube()">
+        <img class="center-block img-responsive" src='../../assets/youtube_logo.png'>
+      </a>
+    </div>
+    <div class="col-md-2">
+      <a [href]="navigationService.twitter()">
+        <img class="center-block img-responsive" src='../../assets/twitter_logo.png'>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a [href]="navigationService.bigcartel()">
+        <img class="center-block img-responsive" src='../../assets/bigcartel_logo.png'>
+      </a>
+      <a [href]="navigationService.skiddle()">
+        <img class="center-block img-responsive" src='../../assets/skiddle_logo.png'>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="row social-small">
+  <div class="col-md-12">
+    <div class="col-md-12">
+      <div class="rounded">
+        <a [href]="navigationService.facebook()">
+          <img src='../../assets/facebook_logo.png' width="100">
+        </a>
+        <a [href]="navigationService.youtube()">
+          <img src='../../assets/youtube_logo.png' width="100">
+        </a>
+        <a [href]="navigationService.twitter()">
+          <img src='../../assets/twitter_logo.png' width="100">
+        </a>
+        <a [href]="navigationService.bigcartel()">
+          <img src='../../assets/bigcartel_logo.png' width="120">
+        </a>
+        <a [href]="navigationService.skiddle()">
+          <img src='../../assets/skiddle_logo.png' width="120">
+        </a>
       </div>
     </div>
   </div>

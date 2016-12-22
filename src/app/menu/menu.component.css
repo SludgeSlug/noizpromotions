@@ -1,3 +1,13 @@
 .navbar-nav li a {
  line-height: 30px;
 }
+
+.social-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+  .social-menu {
+      display: block;
+  }
+}

@@ -1,0 +1,20 @@
+@media (max-width: 991px) {
+  .social-page {
+    display: none;
+  }
+  .social-small {
+      display: block;
+  }
+}
+
+@media (min-width:991px) {
+  .social-small {
+      display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-small {
+      display: none;
+  }
+}

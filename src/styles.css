@@ -11,8 +11,6 @@ a:hover {
     color: white;
 }
 
-.clickable {cursor: pointer}
-
 .rounded {
   border-radius: 10px;
   border: solid 8px white;

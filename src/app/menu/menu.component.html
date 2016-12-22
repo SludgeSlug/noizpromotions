@@ -31,8 +31,18 @@
         </li>
         <li [class.active]="activePage('contact')">
           <a (click)="collapsed = !collapsed" [routerLink]="navigationService.contact()">Contact us</a>
-        </li>
+        </li>        
       </ul>
+      <div class="social-menu">
+          <hr>
+          <ul class="nav navbar-nav">
+            <li><a [href]="navigationService.facebook()">Facebook</a></li>
+            <li><a [href]="navigationService.youtube()">YouTube</a></li>
+            <li><a [href]="navigationService.twitter()">Twitter</a></li>
+            <li><a [href]="navigationService.bigcartel()">Big Cartel</a></li>
+            <li><a [href]="navigationService.skiddle()">Skiddle</a></li>
+          </ul>
+        </div>
     </div>
   </div>
 </nav>
