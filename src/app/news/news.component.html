@@ -1,10 +1,20 @@
 <div class="row">
   <div class="col-md-12">
-    <div class="col-md-12">
-      <div class="rounded" *ngFor="let blogPost of blogPosts">
+    <div class="col-md-12" *ngFor="let blogPost of blogPosts">
+      <div class="rounded">
         <h3>{{blogPost.title.$t}}</h3>
         <div [innerHTML]="blogPost.content.$t"></div>
       </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="col-md-3">
+      <a *ngIf="olderPage" [routerLink]="newsUrl" [queryParams]="{page: olderPage}">&lt;&lt; Older posts</a>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="col-md-3">
+      <a *ngIf="newPage > -1" [routerLink]="newsUrl" [queryParams]="{page: newPage}">Newer posts &gt;&gt;</a>
     </div>
   </div>
 </div>
