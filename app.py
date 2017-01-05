@@ -9,7 +9,7 @@ app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
 @app.route('/api/email', methods=['POST'])
 def send_email():
     email_json = request.get_json(force=True)
-    result = email_sender.sendMail(email_json, request.remote_addr)
+    result = email_sender.sendMail(email_json)
     if result == 'failed':
         return 'Bad request', 400
     return 'OK'

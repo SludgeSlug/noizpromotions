@@ -1,16 +1,9 @@
 import smtplib
 import config as config
-import db as db
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 
-def sendMail(emailData, ipAddress):
-    db.clear_old_log()
-    emailCount = db.get_email_count(ipAddress)
-
-    if emailCount > 20:
-        return "failed"
-
+def sendMail(emailData):
     fromaddr = config.EMAIL_FROM_ADDRESS
     toaddr = getToAddr(emailData['subject'])
     if toaddr == '':
@@ -33,7 +26,6 @@ def sendMail(emailData, ipAddress):
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
-    db.log_email(ipAddress)
     return "ok"
 
 def getToAddr(subject):
