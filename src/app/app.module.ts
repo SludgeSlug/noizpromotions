@@ -9,8 +9,9 @@ import { routing } from './app.routing.module';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about';
+import { EventsComponent } from './events';
 
-import { BlogService, NavigationService, ContactService } from './shared';
+import { BlogService, NavigationService, ContactService, EventsService } from './shared';
 import { ContactComponent } from './contact';
 import { NewsComponent } from './news/news.component';
 
@@ -21,7 +22,8 @@ import { NewsComponent } from './news/news.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    NewsComponent
+    NewsComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { NewsComponent } from './news/news.component';
   providers: [
     BlogService,
     NavigationService,
-    ContactService
+    ContactService,
+    EventsService
   ],
   bootstrap: [AppComponent]
 })

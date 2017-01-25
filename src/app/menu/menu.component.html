@@ -18,7 +18,7 @@
           <a (click)="collapsed = !collapsed" [routerLink]="navigationService.home()">Home</a>
         </li>
         <li [class.active]="activePage('events')">
-          <a (click)="collapsed = !collapsed" [href]="navigationService.events()">Events</a>
+          <a (click)="collapsed = !collapsed" [routerLink]="navigationService.events()">Events</a>
         </li>
         <li [class.active]="activePage('news')">
           <a (click)="collapsed = !collapsed" [routerLink]="navigationService.news()">News</a>

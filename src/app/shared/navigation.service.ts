@@ -23,7 +23,7 @@ export class NavigationService {
     }
 
     public events(): string {
-        return 'https://www.facebook.com/pg/noizpromo/events/';
+        return '/events';
     }
 
     public store(): string {

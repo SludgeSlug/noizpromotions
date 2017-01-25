@@ -5,6 +5,7 @@ import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { NewsComponent } from './news';
 import { ContactComponent } from './contact';
+import { EventsComponent } from './events';
 
 const appRoutes: Routes = [
   {
@@ -19,6 +20,9 @@ const appRoutes: Routes = [
   }, {
     path: 'contact',
     component: ContactComponent
+  }, {
+    path: 'events',
+    component: EventsComponent
   }
 ];
 
