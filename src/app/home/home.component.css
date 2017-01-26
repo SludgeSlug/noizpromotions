@@ -18,3 +18,25 @@
       display: none;
   }
 }
+
+.crop-height {
+  /* max-width: 1200px; /* native or declared width of img src (if known) */
+	max-height: 250px;
+	overflow: hidden; 
+}
+
+.scale {
+  /* corrects small inline gap at bottom of containing div */
+	display: block; 
+    width: 100%; /* corrects obscure Firefox bug */
+	max-width: 100%;
+    opacity: 0.5;
+	/* just in case, to force correct aspect ratio */
+	height: auto !important;
+}
+
+.glyphicon {
+    top: 50%;
+    display:inline-block; 
+    vertical-align: middle;
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationService } from '../shared';
+import { EventsService } from '../shared';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,33 @@ import { NavigationService } from '../shared';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public navigationService: NavigationService) { }
+  public interval: number = 3000;
+  public slides: any[];
+
+  constructor(public navigationService: NavigationService, private eventsService: EventsService) { }
 
   ngOnInit() {
+    this.eventsService.getEvents()
+      .subscribe((response) => {
+        let events = response.data.sort((a, b) => {
+          return new Date(a.start_time).getTime() - new Date(b.start_time).getTime();
+        });
+
+        events = events.slice(0, 5);
+
+        this.slides = [];
+        events.forEach(event => {
+          this.slides.push({
+            image: event.cover.source,
+            caption: event.name,
+            date: event.start_time
+          });
+        });
+      });
+  }
+
+  isActive(slide: any) {
+    return slide === this.slides[0];
   }
 
 }

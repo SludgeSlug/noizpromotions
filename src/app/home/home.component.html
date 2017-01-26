@@ -6,6 +6,44 @@ http://jsfiddle.net/zwvNY/3347/
   <div class="col-md-12">
     <div class="col-md-12">
       <div class="rounded">
+        <!--<div class="carousel">
+          <ul class="slides">
+            <li *ngFor="let slide of slides">
+              <h2>{{slide.caption}} - {{slide.date | date:'dd MMM yyyy - HH:mm'}}</h2>
+              <img src="{{slide.image}}" alt="">
+            </li>
+          </ul>
+        </div>-->
+        <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div *ngFor="let slide of slides" class="item crop-height" [ngClass]="{active: isActive(slide)}">
+              <img class="scale" src="{{slide.image}}" alt="{{slide.image}}">
+              <div class="carousel-caption">
+                <h3>{{slide.caption}}</h3>
+                <p> {{slide.date | date:'dd MMM yyyy - HH:mm'}}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
+            <span class="glyphicon" aria-hidden="true"><</span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
+            <span class="glyphicon" aria-hidden="true">></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-12">
+      <div class="rounded">
         <a [routerLink]="navigationService.events()">
           <img class="center-block img-responsive clickable" src='../../assets/events_cta.png'>
         </a>

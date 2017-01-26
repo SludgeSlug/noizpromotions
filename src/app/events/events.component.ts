@@ -11,7 +11,6 @@ export class EventsComponent implements OnInit {
     constructor(public eventsService: EventsService) { }
 
     ngOnInit() {
-        //this.events = this.eventsService.getEvents();
         this.eventsService.getEvents()
             .subscribe((events) => {
                 this.events = events.data.sort((a, b) => {
