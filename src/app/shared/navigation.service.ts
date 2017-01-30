@@ -47,7 +47,7 @@ export class NavigationService {
     }
 
     public skiddle(): string{
-        return 'https://www.skiddle.com/whats-on/Manchester/Rebellion/Noiz-all-dayer/12678694/';
+        return 'https://www.skiddle.com/whats-on/all/?keyword=noiz&home=1';
     }
 
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
 import { EventsService } from '../shared';
 
 @Component({
@@ -9,7 +8,7 @@ export class EventsComponent implements OnInit {
 
     events: any;
 
-    constructor(public eventsService: EventsService, private activatedRoute: ActivatedRoute) { }
+    constructor(public eventsService: EventsService) { }
 
     ngOnInit() {
         this.eventsService.getEvents()
@@ -17,24 +16,12 @@ export class EventsComponent implements OnInit {
                 this.events = events.data.sort((a, b) => {
                     return new Date(a.start_time).getTime() - new Date(b.start_time).getTime();
                 });
-                this.scrollToEvent();
             });
     }
 
     public getDescription(content: string) {
         let description = content.split('\n').join('<br>');
         return this.linkify(description);
-    }
-
-    private scrollToEvent() {
-        this.activatedRoute.queryParams.subscribe((params: Params) => {
-            console.log(params);
-            let eventId = params['eventId'];
-            console.log(eventId);
-            if(eventId) {
-                console.log(eventId);
-            }
-        });
     }
 
     private linkify(plainText): string {

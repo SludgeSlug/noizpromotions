@@ -28,15 +28,11 @@ export class HomeComponent implements OnInit {
           this.slides.push({
             image: event.cover.source,
             caption: event.name,
-            id: event.id,
+            fb_link: 'https://www.facebook.com/events/' + event.id,
             date: event.start_time
           });
         });
       });
-  }
-
-  getEventLink(eventId) {
-    return this.navigationService.events() +  '?eventId=' + eventId;
   }
 
   isActive(slide: any) {

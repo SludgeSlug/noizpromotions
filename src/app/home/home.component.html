@@ -7,7 +7,7 @@
             <div *ngFor="let slide of slides" class="item crop-height" [ngClass]="{active: isActive(slide)}">
               <img class="scale" src="{{slide.image}}" alt="{{slide.image}}">
               <div class="carousel-caption">
-                <a [routerLink]="navigationService.events()" [queryParams]="{eventId: slide.id}">
+                <a [href]="slide.fb_link">
                   <h3>{{slide.caption}}</h3>
                 </a>
                 <p> {{slide.date | date:'dd MMM yyyy - HH:mm'}}</p>
@@ -17,11 +17,11 @@
 
           <!-- Controls -->
           <a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
-            <span class="glyphicon" aria-hidden="true"><</span>
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
           <a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
-            <span class="glyphicon" aria-hidden="true">></span>
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
         </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from '../shared';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -8,14 +9,20 @@ import { ContactService } from '../shared';
 })
 export class ContactComponent implements OnInit {
 
-  email: Object = {};
+  email: any = {subject: ''};
   success: boolean = false;
   failed: boolean = false;
   loading: boolean = false;
 
-  constructor(private contactService: ContactService) { }
+  constructor(private contactService: ContactService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.activatedRoute.queryParams.subscribe((params: Params) => {
+            let subject = params['subject'];
+            if(subject) {
+                this.email.subject = subject;
+            }
+        });
   }
 
   sendEmail() {

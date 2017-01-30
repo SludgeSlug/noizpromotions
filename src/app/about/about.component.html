@@ -31,9 +31,10 @@
     <div class="col-md-12 rounded contains-columns">
         <div class="col-md-8">
             <p>
-                We have several new and exciting projects that we are preparing to launch in 2017. You can sign up to our MAILING LIST or
-                connect with us on <a [href]="navigationService.facebook()">FACEBOOK</a> to be first in
-                line for all of our updates and announcements!
+                We have several new and exciting projects that we are preparing to launch in 2017. You can sign up to our
+                <a
+                    [routerLink]="navigationService.contact()" [queryParams]="{subject:'mailinglist'}">MAILING LIST</a> or connect with us on <a [href]="navigationService.facebook()">FACEBOOK</a> to be first in line
+                    for all of our updates and announcements!
             </p>
             <img class="img-responsive" src='../../assets/p_sep.png'>
             <p>

@@ -35,12 +35,6 @@
 	height: auto !important;
 }
 
-.glyphicon {
-    top: 50%;
-    display:inline-block; 
-    vertical-align: middle;
-}
-
 .carousel-caption  a{
   color: white;
   overflow-wrap: break-word;
