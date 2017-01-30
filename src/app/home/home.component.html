@@ -1,25 +1,15 @@
-<!--http://onehungrymind.com/build-sweet-photo-slider-angularjs-animate/
-http://codepen.io/Fabiano/pen/LACzk
-http://jsfiddle.net/zwvNY/3347/
--->
 <div class="row">
   <div class="col-md-12">
     <div class="col-md-12">
       <div class="rounded">
-        <!--<div class="carousel">
-          <ul class="slides">
-            <li *ngFor="let slide of slides">
-              <h2>{{slide.caption}} - {{slide.date | date:'dd MMM yyyy - HH:mm'}}</h2>
-              <img src="{{slide.image}}" alt="">
-            </li>
-          </ul>
-        </div>-->
         <div id="carousel-generic" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
             <div *ngFor="let slide of slides" class="item crop-height" [ngClass]="{active: isActive(slide)}">
               <img class="scale" src="{{slide.image}}" alt="{{slide.image}}">
               <div class="carousel-caption">
-                <h3>{{slide.caption}}</h3>
+                <a [routerLink]="navigationService.events()" [queryParams]="{eventId: slide.id}">
+                  <h3>{{slide.caption}}</h3>
+                </a>
                 <p> {{slide.date | date:'dd MMM yyyy - HH:mm'}}</p>
               </div>
             </div>
