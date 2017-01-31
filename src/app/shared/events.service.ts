@@ -11,8 +11,7 @@ export class EventsService {
     }
 
     getEvents():any {
-        let url = this.url + '?access_token=' + this.accessToken + 
-            '&fields=id,start_time,cover,description,name,place&since=1484691615';
+        let url = 'api/events';
         return this.http.get(url)
             .map((res:Response) => res.json());
     }

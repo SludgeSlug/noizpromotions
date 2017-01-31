@@ -1,7 +1,8 @@
 import os
-import json
+import json, requests
 from flask import Flask, Response, render_template, send_from_directory, request
 import server.email_sender as email_sender
+import server.event_getter as event_getter
 
 app = Flask(__name__, template_folder='dist')
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
@@ -13,6 +14,16 @@ def send_email():
     if result == 'failed':
         return 'Bad request', 400
     return 'OK'
+
+@app.route('/api/events', methods=['GET'])
+def get_events():
+    events = event_getter.get_events()
+    response = app.response_class(
+        response=json.dumps(events.json()),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
 
 @app.route('/')
 def root():
