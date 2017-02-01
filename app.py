@@ -45,6 +45,10 @@ def news():
 def contact():
    return render_template('index.html')
 
+@app.route('/links')
+def links():
+   return render_template('index.html')
+
 @app.route('/<path:path>')
 def get_resource(path):
     return send_from_directory('dist', path)
