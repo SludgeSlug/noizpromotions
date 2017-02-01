@@ -6,6 +6,7 @@ import { AboutComponent } from './about';
 import { NewsComponent } from './news';
 import { ContactComponent } from './contact';
 import { EventsComponent } from './events';
+import { LinksComponent } from './links';
 
 const appRoutes: Routes = [
   {
@@ -23,6 +24,9 @@ const appRoutes: Routes = [
   }, {
     path: 'events',
     component: EventsComponent
+  }, {
+    path: 'links',
+    component: LinksComponent
   }
 ];
 

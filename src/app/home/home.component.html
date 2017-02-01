@@ -59,7 +59,9 @@
     </div>
     <div class="col-md-4">
       <div class="rounded">
-        <img class="center-block img-responsive" src='../../assets/links_cta.png'>
+        <a [routerLink]="navigationService.links()">
+          <img class="center-block img-responsive" src='../../assets/links_cta.png'>
+        </a>
       </div>
     </div>
   </div>

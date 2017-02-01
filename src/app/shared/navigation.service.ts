@@ -26,6 +26,10 @@ export class NavigationService {
         return '/events';
     }
 
+    public links(): string {
+        return '/links';
+    }
+
     public store(): string {
         return 'http://noizstore.bigcartel.com/';
     }

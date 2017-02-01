@@ -29,6 +29,22 @@ def get_events():
 def root():
     return render_template('index.html')
 
+@app.route('/about')
+def about():
+   return render_template('index.html')
+
+@app.route('/events')
+def events():
+   return render_template('index.html') 
+
+@app.route('/news')
+def news():
+   return render_template('index.html')
+
+@app.route('/contact')
+def contact():
+   return render_template('index.html')
+
 @app.route('/<path:path>')
 def get_resource(path):
     return send_from_directory('dist', path)

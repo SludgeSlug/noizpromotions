@@ -10,6 +10,7 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about';
 import { EventsComponent } from './events';
+import { LinksComponent } from './links';
 
 import { BlogService, NavigationService, ContactService, EventsService } from './shared';
 import { ContactComponent } from './contact';
@@ -23,7 +24,8 @@ import { NewsComponent } from './news/news.component';
     AboutComponent,
     ContactComponent,
     NewsComponent,
-    EventsComponent
+    EventsComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,

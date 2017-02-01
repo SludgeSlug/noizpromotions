@@ -7,7 +7,8 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class BlogService {
-    private url = 'https://noizpromo.blogspot.com//feeds/posts/default?alt=json-in-script&callback=JSONP_CALLBACK';
+    private url = 'https://noizpromo.blogspot.com/feeds/posts/default?alt=json-in-script&callback=JSONP_CALLBACK';
+    private linksUrl = 'https://noizpromo.blogspot.com/feeds/pages/default?alt=json-in-script&callback=JSONP_CALLBACK'
     private pageSize: number = 5;
 
     constructor (private jsonp: Jsonp) {}
@@ -26,6 +27,11 @@ export class BlogService {
         let postsUrl = this.url + '&max-results=' + this.pageSize + '&start-index=' + startIndex;
         return this.jsonp.get(postsUrl)
                         .map(this.extractData);
+    }
+
+    getPages(): Observable<any> {
+        return this.jsonp.get(this.linksUrl)
+            .map(this.extractData);
     }
 
     private extractData(res: Response) {
